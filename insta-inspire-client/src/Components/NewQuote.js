@@ -34,12 +34,12 @@ const NewQuoteForm = (props) => {
 
     return (
         <>
-        <h1>New Quote</h1>
-        <form onSubmit={newQuote}>
-            <label>Mood:<input type='text' name='mood' ref={moodInput} /><br/></label>
-            <label>Author:<input type='text' name='author' ref={authorInput} /><br/></label>
-            <label>Quote:<input type='text' name='quote' ref={quoteInput} /><br/></label>
-        </form>   
+            <h1>New Quote</h1>
+                <form onSubmit={newQuote}>
+                    <label>Mood:<input type='text' name='mood' ref={moodInput} /><br/></label>
+                    <label>Author:<input type='text' name='author' ref={authorInput} /><br/></label>
+                    <label>Quote:<input type='text' name='quote' ref={quoteInput} /><br/></label>
+                </form>   
         </>
     );
 };

@@ -4,7 +4,7 @@ import {Route, Switch, Link} from 'react-router-dom';
 import NewQuote from './Components/NewQuote.js'
 import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
-// import Home from '.Components/Home.js'
+// import Home from './Components/Home.js';
 
 
 function App() {
