@@ -7,6 +7,7 @@ function ShowQuote(routerProps) {
     const fetchQuote = async () => {
         try{
             const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes${quote.id}`);
+
             const json = await res.json();
             setQuote(json)
         }catch(error){
