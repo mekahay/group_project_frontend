@@ -4,12 +4,13 @@ import {Route, Switch, Link} from 'react-router-dom';
 import NewQuote from './Components/NewQuote.js'
 import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
+// import Home from '.Components/Home.js'
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>INSTA-INSPIRE</h1>
      <Router>
       {/* Navigation bar in here somewhere? */}
       <div className='nav-routes'/>
@@ -19,7 +20,7 @@ function App() {
       <h1>How Do You Feel Today?</h1>
       
       <Switch>
-        <Route path='/' component={Home} />
+        {/* <Route path='/' component={Home} /> */}
         <Route path='/NewQuote' component={NewQuote} />
         <Route path='/EditQuote/:id' component={EditQuote} />
         <Route path='/ShowQuote/:id' component={ShowQuote} />
