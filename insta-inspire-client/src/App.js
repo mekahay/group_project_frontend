@@ -10,7 +10,7 @@ import ShowQuote from './Components/ShowQuote.js'
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>INSTA-INSPIRE</h1>
      <Router>
       {/* Navigation bar in here somewhere? */}
       <div className='nav-routes'/>
