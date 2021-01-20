@@ -36,7 +36,7 @@ function ShowQuote(routerProps) {
 
       return (
           <div>
-            <h1>{quote.author}</h1>
+            <h1>{quote.user}</h1>
             <h2>{quote.quote}</h2>
             <p>{quote.mood}</p>
           </div>
