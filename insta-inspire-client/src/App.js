@@ -19,7 +19,7 @@ function App() {
       <h1>How Do You Feel Today?</h1>
       
       <Switch>
-        <Route path='/' component={QuoteFeed} />
+        <Route path='/' component={Home} />
         <Route path='/NewQuote' component={NewQuote} />
         <Route path='/EditQuote/:id' component={EditQuote} />
         <Route path='/ShowQuote/:id' component={ShowQuote} />
