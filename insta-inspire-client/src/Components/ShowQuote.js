@@ -6,7 +6,7 @@ function ShowQuote(routerProps) {
 
     const fetchQuote = async () => {
         try{
-            const res = await fetch(`http://localhost:3000/Home/${routerProps.match.params.id}`);
+            const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes${quote.id}`);
             const json = await res.json();
             setQuote(json)
         }catch(error){
@@ -16,7 +16,7 @@ function ShowQuote(routerProps) {
 
     const deleteQuote = async (id) => {
         try {
-          const response = await fetch(`http://localhost:3000/Home/${id}`, {
+          const response = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${quote.id}`, {
             method: "DELETE",
             headers: {
               "Content-type": "application/json",
