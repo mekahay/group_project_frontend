@@ -20,7 +20,7 @@ const NewQuoteForm = (props) => {
         event.currentTarget.reset();
 
         try {
-            const response = await fetch ('http://localhost:3000/Home', {
+            const response = await fetch ('https://insta-api-sei-12345.herokuapp.com/quotes', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: body,
