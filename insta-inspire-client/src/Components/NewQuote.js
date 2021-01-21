@@ -34,6 +34,8 @@ const NewQuoteForm = (props) => {
 
     return (
         <>
+            <h2>find user</h2>
+                
             <h1>New Quote</h1>
                 <form onSubmit={newQuote}>
                     <label>Mood:<input type='text' name='mood' ref={moodInput} /><br/></label>
