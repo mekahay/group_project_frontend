@@ -2,14 +2,17 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 
 function ShowQuote(routerProps) {
-    const [quote, setQuote] = useState([]);
+    const [quote, setQuote] = useState({});
+    // const [user, setUser] = useState([]);
+    
 
     const fetchQuote = async () => {
+      const id = routerProps.match.params.id
         try{
-            const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes${quote.id}`);
+            const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${id}`);
 
             const json = await res.json();
-            setQuote(json)
+            setQuote(json.quote)
         }catch(error){
             console.error(error);
         }
@@ -17,33 +20,40 @@ function ShowQuote(routerProps) {
 
     const deleteQuote = async (id) => {
         try {
-          const response = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${quote.id}`, {
+          // const id = routerProps.match.params.id
+          const response = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${id}`, {
             method: "DELETE",
             headers: {
               "Content-type": "application/json",
             },
           });
           const data = await response.json();
-          const filteredQuotes = quote.filter((quote) => quote.id !== data.id);
+          const filteredQuotes = quote.filter((quote) => quote._id !== data.id);
           setQuote(filteredQuotes);
         } catch (error) {
           console.log(error);
         }
       };
 
+      // const setSelected = (index) => {
+      //   setQuote(quotes[index])
+      // }
+
       useEffect(() => {
           fetchQuote();
+          console.log(quote)
       }, []);
 
-      return (
-          <div>
-            <h1>{quote.author}</h1>
-            <h2>{quote.quote}</h2>
-            <p>{quote.mood}</p>
-          </div>
 
-        
-      );
-};
+      return (
+        <>
+          <div>
+              <h1>{quote.name}</h1>
+              <h2>{quote.text}</h2>
+              <p>Mood: {quote.mood}</p>
+          </div>
+        </>
+    );
+}
 
 export default ShowQuote;
