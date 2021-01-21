@@ -4,7 +4,7 @@ import {Route, Switch, Link} from 'react-router-dom';
 import NewQuote from './Components/NewQuote.js'
 import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
-// import Home from './Components/Home.js';
+import Home from './Components/Home.js';
 
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
       <Link to='/'> HOME PAGE</Link> <br/>
       <Link to='/NewQuote'> ADD A NEW QUOTE </Link> <br/>
       <Link to='/EditQuote'> UPDATE QUOTE </Link>
-      <h1>How Do You Feel Today?</h1>
+      <h2>How Do You Feel Today?</h2>
       
       <Switch>
-        {/* <Route path='/' component={Home} /> */}
+        <Route path='/' exact component={Home} />
         <Route path='/NewQuote' component={NewQuote} />
         <Route path='/EditQuote/:id' component={EditQuote} />
         <Route path='/ShowQuote/:id' component={ShowQuote} />
