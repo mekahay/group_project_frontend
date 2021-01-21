@@ -22,11 +22,12 @@ function QuoteFeed () {
     return (
         <div className='home'>
             {quotes.map((quote) => {
+                console.log(quote)
                 return (
                     <div>
                         <ul>
-                            <h2>{quote.quote}</h2>
-                            <p>{quote.author}</p>
+                            <h2>{quote.text}</h2>
+                            <p>{quote.user.name}</p>
                             <p>{quote.mood}</p>
                         </ul>
                     </div>

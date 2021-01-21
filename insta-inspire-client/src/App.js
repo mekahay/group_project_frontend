@@ -20,7 +20,7 @@ function App() {
       <h2>How Do You Feel Today?</h2>
       
       <Switch>
-        <Route path='/' component={Home} />
+        <Route path='/' exact component={Home} />
         <Route path='/NewQuote' component={NewQuote} />
         <Route path='/EditQuote/:id' component={EditQuote} />
         <Route path='/ShowQuote/:id' component={ShowQuote} />
