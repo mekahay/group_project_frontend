@@ -14,14 +14,17 @@ const NewQuoteForm = (props) => {
        
         try {
             const res = await fetch (`https://insta-api-sei-12345.herokuapp.com/users/searchUser?u=${name}`)
+            // console.log(res)
+            console.log(res.body)
             const body = JSON.stringify({
                 quote: {
                     mood,
                     text,
                 },
-                user_id: data.id
+                user_id: 1
                 
             });
+            console.log(body)
     
             // event.currentTarget.reset();
             const response = await fetch ('https://insta-api-sei-12345.herokuapp.com/quotes', {
