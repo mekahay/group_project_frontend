@@ -17,7 +17,7 @@ function App() {
       <Link to='/'> HOME PAGE</Link> <br/>
       <Link to='/NewQuote'> ADD A NEW QUOTE </Link> <br/>
       <Link to='/EditQuote'> UPDATE QUOTE </Link>
-      <h1>How Do You Feel Today?</h1>
+      <h2>How Do You Feel Today?</h2>
       
       <Switch>
         <Route path='/' exact component={Home} />
