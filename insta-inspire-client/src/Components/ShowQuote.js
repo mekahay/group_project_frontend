@@ -1,18 +1,18 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 
-function ShowQuote(routerProps) {
+function ShowQuote(props) {
     const [quote, setQuote] = useState({});
     // const [user, setUser] = useState([]);
     
 
     const fetchQuote = async () => {
-      const id = routerProps.match.params.id
+      const id = props.match.params.id
         try{
             const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${id}`);
 
             const json = await res.json();
-            setQuote(json.quote)
+            setQuote(json)
         }catch(error){
             console.error(error);
         }
