@@ -26,7 +26,7 @@ function QuoteFeed () {
     return (
         <div className='home'>
             {quotes.map((quote) => {
-                console.log(quote)
+                {/* console.log(quote) */}
                 return (
                     <div>
                         <Link to={`/ShowQuote/${quote.id}`}>
