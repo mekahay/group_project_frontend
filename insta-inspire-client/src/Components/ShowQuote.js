@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 function ShowQuote(props) {
     const [quote, setQuote] = useState({});
@@ -33,6 +34,8 @@ function ShowQuote(props) {
         } catch (error) {
           console.log(error);
         }
+        props.history.push('/')
+        
       };
 
       // const setSelected = (index) => {
@@ -47,10 +50,13 @@ function ShowQuote(props) {
 
       return (
         <>
-          <div>
+          <div key={quote.id}>
+           <Link to={`/ShowQuote/${quote.id}`}>{quote.content}</Link>
               <h1>{quote.name}</h1>
               <h2>{quote.text}</h2>
               <p>Mood: {quote.mood}</p>
+            <Link to={`/EditQuote/${quote.id}`}><button>Edit Quote</button></Link>
+            <button onClick={(event) => {deleteQuote(quote.id);}}>Delete Quote</button>
           </div>
         </>
     );
