@@ -6,21 +6,31 @@ import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
 import Home from './Components/Home.js';
 import SearchQuotes from './Components/SearchQuotes.js'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Nav, Navbar } from 'react-bootstrap'
 
 function App() {
   return (
     <div className="App">
       <h1>INSTA-INSPIRE</h1>
-     <Router>
-      {/* Navigation bar in here somewhere? */}
       <div className='nav-routes'/>
-      <Link to='/'> HOME PAGE</Link> <br/>
-      <Link to='/NewQuote'> ADD A NEW QUOTE </Link> <br/>
-      <Link to='/EditQuote'> UPDATE QUOTE </Link> <br/>
-      <Link to='/SearchQuotes'>Search Quotes</Link>
-      <h2>How Do You Feel Today?</h2>
+     
+     <Navbar bg="light" expand="lg">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+      <Nav.Link href='/'> Home</Nav.Link>
+      <Nav.Link href='/NewQuote'> Add New Quote</Nav.Link>
+      {/* <Nav.Link href='/EditQuote'> Edit Quote </Nav.Link> */}
+      <Nav.Link href='/SearchQuotes'>Search Quotes</Nav.Link>
+      </Nav>
+      </Navbar.Collapse>
+      </Navbar>
+
+      <h2>Lets get inspired</h2>
+
       
+      <Router>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/NewQuote' component={NewQuote} />
