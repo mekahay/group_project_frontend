@@ -17,7 +17,7 @@ function QuoteFeed (props) {
         }
     };
 
-
+    
 
     useEffect(() => {
         fetchQuotes();
@@ -36,7 +36,7 @@ function QuoteFeed (props) {
                             text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                             style={{ width: '28rem' }}
                             className="mb-2">
-                            <Card.Header></Card.Header>
+                            <Card.Header>{quote.name}</Card.Header>
                                 <Card.Body>
                                     <Card.Title> {quote.text} </Card.Title>
                                     <Card.Text>Currently feeling {quote.mood}</Card.Text>
