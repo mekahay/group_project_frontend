@@ -6,7 +6,6 @@ import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
 import Home from './Components/Home.js';
 import SearchQuotes from './Components/SearchQuotes.js'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Nav, Navbar } from 'react-bootstrap'
 
 function App() {
