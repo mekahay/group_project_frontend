@@ -1,11 +1,10 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 
 function QuoteFeed () {
     const [quotes, setQuotes] = useState([]);
-    
 
     const fetchQuotes = async () => {
         
@@ -17,6 +16,8 @@ function QuoteFeed () {
             console.log(error);
         }
     };
+
+
 
     useEffect(() => {
         fetchQuotes();
@@ -37,6 +38,7 @@ function QuoteFeed () {
                             </ul>
                         </Link>
                     </div>
+                    
                 );
             })}
         </div>

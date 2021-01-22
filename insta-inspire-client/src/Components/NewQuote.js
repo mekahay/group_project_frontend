@@ -5,13 +5,14 @@ const NewQuoteForm = (props) => {
     const moodInput = useRef(null);
     const userInput = useRef(null);
     const quoteInput = useRef(null);
+    
 
     const newQuote = async (event) => {
         event.preventDefault();
         const mood = moodInput.current.value;
         const name = userInput.current.value;
         const text = quoteInput.current.value;
-       
+
         try {
             const res = await fetch (`https://insta-api-sei-12345.herokuapp.com/users/searchUser?u=${name}`)
             const data = await res.json()
@@ -22,6 +23,7 @@ const NewQuoteForm = (props) => {
                     text,
                 },
                 user_id: data[0].id
+
                 
             });
             console.log(body)
@@ -37,12 +39,12 @@ const NewQuoteForm = (props) => {
         }catch (error){
             console.error(error);
         }
-
-       
     }
 
     return (
         <>
+            <h2>find user</h2>
+                
             <h1>New Quote</h1>
                 <form onSubmit={newQuote}>
                     <label>Mood:<input type='text' name='mood' ref={moodInput} /><br/></label>
