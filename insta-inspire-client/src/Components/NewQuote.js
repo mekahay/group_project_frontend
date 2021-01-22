@@ -1,5 +1,7 @@
 import React from 'react';
 import {useRef} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Form } from 'react-bootstrap'
 
 const NewQuoteForm = (props) => {
     const moodInput = useRef(null);
@@ -42,12 +44,15 @@ const NewQuoteForm = (props) => {
     }
 
     return (
-        <>
-            <h2>find user</h2>
-                
+        <>                
             <h1>New Quote</h1>
                 <form onSubmit={newQuote}>
-                    <label>Mood:<input type='text' name='mood' ref={moodInput} /><br/></label>
+                <Form.Control ref={moodInput} as="select" className="mr-sm-2" id="inlineFormCustomSelect" custom>
+                    <option value="0">Choose...</option>
+                    <option value="sad">Sad</option>
+                    <option value="heartbroken">Heartbroken</option>
+                    <option value="lazy">Lazy</option>
+                </Form.Control>
                     <label>User:<input type='text' name='user' ref={userInput} /><br/></label>
                     <label>Quote:<input type='text' name='quote' ref={quoteInput} /><br/></label>
                     <input type="submit" value="Add New Quote"/>

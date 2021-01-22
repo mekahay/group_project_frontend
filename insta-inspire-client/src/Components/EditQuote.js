@@ -1,5 +1,7 @@
 import React from 'react';
 import {useRef} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Dropdown } from 'react-bootstrap'
 
 const EditQuoteForm = (props) => {
     const editMoodInput = useRef(null);
@@ -42,6 +44,7 @@ const EditQuoteForm = (props) => {
             <form onSubmit={editQuote}>
                 <label>Quote:<input type='text' name='quote' ref={editQuoteInput} /><br/></label>
                 <label>Mood:<input type='text' name='mood' ref={editMoodInput} /><br/></label>
+                
                 {/* <label>User:<input type='text' name='user' ref={editUserInput} /><br/></label> */}
                 <input type='submit' name='' value='Edit Quote'/>
             </form>   

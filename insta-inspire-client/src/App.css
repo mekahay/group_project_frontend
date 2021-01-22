@@ -1,6 +1,9 @@
+@import url("https://use.typekit.net/qvz5div.css");
+@import url("https://use.typekit.net/qvz5div.css");
+
 * {
-  background-color: rgb(100, 100, 100);
-  color: aqua;
+  background-color: gainsboro;
+  color: #0086b3;
 }
 .App {
   text-align: center;
@@ -9,6 +12,21 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+h1{
+font-family: vaccine, serif;
+
+font-weight: 700;
+
+font-style: normal;
+}
+
+body{
+font-family: pt-sans-pro, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
 }
 
 @media (prefers-reduced-motion: no-preference) {

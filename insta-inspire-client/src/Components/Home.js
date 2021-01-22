@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
+import { Card } from 'react-bootstrap';
 import {Link } from 'react-router-dom';
 
 
@@ -26,21 +27,23 @@ function QuoteFeed () {
     return (
         <div className='home'>
             {quotes.map((quote) => {
-
-                return (
-                    <div>
-                        <Link to={`/ShowQuote/${quote.id}`}>
-                            <ul>
-                                <li>
-                                    <h2>{quote.text}</h2>
-                                    <p>{quote.user.name}</p>
-                                    <p>{quote.mood}</p>
-                                    <p>{quote.id}</p>
-                                </li>
-                            </ul>
-                        </Link>
-                    </div>
+                console.log(quote)
+                    return (
                     
+                    ['Dark'].map((variant, idx) => (
+                        <Card 
+                        bg={variant.toLowerCase()}
+                        key={idx}
+                        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                        style={{ width: '18rem' }}
+                        className="mb-2">
+                        <Card.Header></Card.Header>
+                        <Card.Body>
+                            <Card.Title> {quote.user.name} {quote.mood} </Card.Title>
+                            <Card.Text><Link to={`/ShowQuote/${quote.id}`}>{quote.text}</Link></Card.Text>
+                        </Card.Body>    
+                        </Card>
+                    ))
                 );
             })}
         </div>
@@ -48,3 +51,4 @@ function QuoteFeed () {
 }
 
 export default QuoteFeed;
+
