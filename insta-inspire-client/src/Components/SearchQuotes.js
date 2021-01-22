@@ -49,14 +49,6 @@ function SearchQuoteFeed () {
     )}
     </ul>
 </>
-    
-        // <Form.Control ref={moodInput} as="select" className="mr-sm-2" id="inlineFormCustomSelect" custom>
-        //             <option value="0">Choose...</option>
-        //             <option value="sad" onClick={() => searchMood('sad')}>Sad</option>
-        //             <option value="heartbroken" onClick={() => searchMood('heartbroken')}>Heartbroken</option>
-        //             <option value="lazy" onClick={() => searchMood('lazy')}>Lazy</option>
-        // </Form.Control>
-
 )
 
 }
