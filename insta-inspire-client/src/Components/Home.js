@@ -3,10 +3,10 @@ import {useState, useEffect} from 'react';
 import {Link } from 'react-router-dom';
 
 
-function QuoteFeed () {
+function QuoteFeed (props) {
     const [quotes, setQuotes] = useState([]);
 
-    const fetchQuotes = async () => {
+    const fetchQuotes = async (props) => {
         
         try {
             const response = await fetch('https://insta-api-sei-12345.herokuapp.com/quotes');
@@ -26,14 +26,13 @@ function QuoteFeed () {
     return (
         <div className='home'>
             {quotes.map((quote) => {
-
                 return (
                     <div>
                         <Link to={`/ShowQuote/${quote.id}`}>
                             <ul>
                                 <li>
                                     <h2>{quote.text}</h2>
-                                    <p>{quote.user.name}</p>
+                                    <p>{quote.name}</p>
                                     <p>{quote.mood}</p>
                                     <p>{quote.id}</p>
                                 </li>
