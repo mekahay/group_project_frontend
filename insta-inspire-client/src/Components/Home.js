@@ -1,11 +1,10 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 
 function QuoteFeed () {
     const [quotes, setQuotes] = useState([]);
-    
 
     const fetchQuotes = async () => {
         
@@ -18,6 +17,8 @@ function QuoteFeed () {
         }
     };
 
+
+
     useEffect(() => {
         fetchQuotes();
     }, []);
@@ -25,6 +26,7 @@ function QuoteFeed () {
     return (
         <div className='home'>
             {quotes.map((quote) => {
+
                 return (
                     <div>
                         <Link to={`/ShowQuote/${quote.id}`}>
@@ -38,6 +40,7 @@ function QuoteFeed () {
                             </ul>
                         </Link>
                     </div>
+                    
                 );
             })}
         </div>

@@ -5,6 +5,7 @@ import NewQuote from './Components/NewQuote.js'
 import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
 import Home from './Components/Home.js';
+import SearchQuotes from './Components/SearchQuotes.js'
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <div className='nav-routes'/>
       <Link to='/'> HOME PAGE</Link> <br/>
       <Link to='/NewQuote'> ADD A NEW QUOTE </Link> <br/>
-      <Link to='/EditQuote'> UPDATE QUOTE </Link>
+      <Link to='/EditQuote'> UPDATE QUOTE </Link> <br/>
+      <Link to='/SearchQuotes'>Search Quotes</Link>
       <h2>How Do You Feel Today?</h2>
       
       <Switch>
@@ -24,6 +26,7 @@ function App() {
         <Route path='/NewQuote' component={NewQuote} />
         <Route path='/EditQuote/:id' component={EditQuote} />
         <Route path='/ShowQuote/:id' component={ShowQuote} />
+        <Route path='/SearchQuotes' component={SearchQuotes} />
       </Switch>
     </Router>
     </div>
