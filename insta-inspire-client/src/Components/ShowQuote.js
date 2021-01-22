@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 
 function ShowQuote(props) {
     const [quote, setQuote] = useState({});
@@ -48,6 +49,7 @@ function ShowQuote(props) {
 
       return (
         <>
+        <Card>
           <div key={quote.id}>
            <Link to={`/ShowQuote/${quote.id}`}>
               {/* <h1>{quote.user.name}</h1> */}
@@ -56,6 +58,7 @@ function ShowQuote(props) {
             <Link to={`/EditQuote/${quote.id}`}><button>Edit Quote</button></Link>
             <button onClick={(event) => {deleteQuote(quote.id);}}>Delete Quote</button>
           </div>
+          </Card>
         </>
     );
 }
