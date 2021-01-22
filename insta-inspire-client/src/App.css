@@ -1,18 +1,16 @@
 @import url("https://use.typekit.net/qvz5div.css");
-@import url("https://use.typekit.net/qvz5div.css");
+/* @import url("https://use.typekit.net/qvz5div.css"); */
 
 * {
   background-color: gainsboro;
   color: #0086b3;
 }
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 h1{
 font-family: vaccine, serif;
 
@@ -28,16 +26,17 @@ font-weight: 400;
 
 font-style: normal;
 }
+
 .card {
   margin: 0 auto; /* Added */
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#Card.Body :hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .App-header {
@@ -55,11 +54,3 @@ font-style: normal;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

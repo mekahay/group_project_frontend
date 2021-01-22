@@ -11,7 +11,6 @@ function ShowQuote(props) {
       const id = props.match.params.id
         try{
             const res = await fetch(`https://insta-api-sei-12345.herokuapp.com/quotes/${id}`);
-
             const json = await res.json();
             setQuote(json)
         }catch(error){
@@ -44,17 +43,16 @@ function ShowQuote(props) {
 
       useEffect(() => {
           fetchQuote();
-          console.log(quote)
       }, []);
 
 
       return (
         <>
           <div key={quote.id}>
-           <Link to={`/ShowQuote/${quote.id}`}>{quote.content}</Link>
-              <h1>{quote.name}</h1>
+           <Link to={`/ShowQuote/${quote.id}`}>
+              {/* <h1>{quote.user.name}</h1> */}
               <h2>{quote.text}</h2>
-              <p>Mood: {quote.mood}</p>
+              <p>Mood: {quote.mood}</p></Link>
             <Link to={`/EditQuote/${quote.id}`}><button>Edit Quote</button></Link>
             <button onClick={(event) => {deleteQuote(quote.id);}}>Delete Quote</button>
           </div>

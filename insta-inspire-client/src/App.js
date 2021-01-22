@@ -6,7 +6,6 @@ import EditQuote from './Components/EditQuote.js'
 import ShowQuote from './Components/ShowQuote.js'
 import Home from './Components/Home.js';
 import SearchQuotes from './Components/SearchQuotes.js'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Nav, Navbar } from 'react-bootstrap'
 
 function App() {
@@ -21,13 +20,15 @@ function App() {
       <Nav className="mr-auto">
       <Nav.Link href='/'> Home</Nav.Link>
       <Nav.Link href='/NewQuote'> Add New Quote</Nav.Link>
-      <Nav.Link href='/EditQuote'> Edit Quote </Nav.Link>
+      {/* <Nav.Link href='/EditQuote'> Edit Quote </Nav.Link> */}
       <Nav.Link href='/SearchQuotes'>Search Quotes</Nav.Link>
       </Nav>
       </Navbar.Collapse>
       </Navbar>
 
       <h2>Lets get inspired</h2>
+
+      
       <Router>
       <Switch>
         <Route path='/' exact component={Home} />
