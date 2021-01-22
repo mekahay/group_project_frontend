@@ -33,7 +33,7 @@ function SearchQuoteFeed () {
     return(
 <>
     <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
+        <Dropdown.Toggle variant="info" id="dropdown-basic">
             Pick Mood
         </Dropdown.Toggle>
 

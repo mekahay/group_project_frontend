@@ -28,6 +28,11 @@ font-weight: 400;
 
 font-style: normal;
 }
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

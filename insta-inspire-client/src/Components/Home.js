@@ -37,9 +37,9 @@ function QuoteFeed () {
                         text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
                         style={{ width: '18rem' }}
                         className="mb-2">
-                        <Card.Header></Card.Header>
+                        <Card.Header>{quote.name}</Card.Header>
                         <Card.Body>
-                            <Card.Title> {quote.user.name} {quote.mood} </Card.Title>
+                            <Card.Title> {quote.mood} </Card.Title>
                             <Card.Text><Link to={`/ShowQuote/${quote.id}`}>{quote.text}</Link></Card.Text>
                         </Card.Body>    
                         </Card>
