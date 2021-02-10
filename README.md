@@ -7,10 +7,7 @@ Insta-Inspire is the group project for General Assembly's Software Engeneering I
 * React Front End
 * Multiple pages using React Router
 * Portfolio quality styling
-# Frontend - 
-* Greg Dusek
-* Tyler Kinnaird
-The front end made using React, React Router, with styling using bootstrap.
+
 # Strengths - 
 * Getting all of the routes to work correctly and the React Router to create a multi page app
 
